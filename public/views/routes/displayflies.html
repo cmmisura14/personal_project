@@ -1,16 +1,11 @@
 <!--Display flies to the DOM-->
 
-<div class="col-md-offset-2">
-    <ul class="nav nav-pills">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#submitflies">Add A New Fly</a></li>
-        <li><a href="#displayflies">Flies</a></li>
-        <li><a href="#streamreport">Stream Report</a></li>
-        <li><a href="#login">Admin Log In</a></li>
-    </ul>
-</div>
 
+<form class="search" novalidate>
+    <label for="season">Search by season: </label>
+    <input id="season" type="text" ng-model="search.color">
+</form>
 <div class="container">
-    <div class="well col-md-3" ng-repeat="fly in flies"><img width="200" height="150" ng-src="{{fly.flyImage}}"/><br>
+    <div class="well col-md-3" ng-repeat="fly in flies | filter: search"><img width="200" height="150" ng-src="{{fly.flyImage}}"/><br>
         {{fly.name}}<br>Use in the {{fly.season}}<br>{{fly.flyType}}<br>Use to catch {{fly.use}}<br></div>
 </div>

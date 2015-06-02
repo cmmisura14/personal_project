@@ -1,8 +1,9 @@
-myApp.controller("DisplayFlyController", ['$scope', '$http', function($scope, $http){
+myApp.controller("DisplayFlyController", ['$scope', '$http', '$filter', function($scope, $http){
     console.log('Display Fly Controller loaded');
 
     $scope.fly = {};
     $scope.flies = [];
+
 
     var fetchFlies = function() {
         return $http.get('/displayflies').then(function (res) {
