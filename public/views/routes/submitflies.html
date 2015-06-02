@@ -1,0 +1,28 @@
+
+<div class="col-md-offset-2">
+    <ul class="nav nav-pills">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#submitflies">Add A New Fly</a></li>
+        <li><a href="#displayflies">Flies</a></li>
+        <li><a href="#streamreport">Stream Report</a></li>
+    </ul>
+</div>
+<section>
+    <div class="well col-md-6 col-md-offset-3">
+        <p>Enter your new fly design here!</p>
+
+        <form novalidate ng-submit="add(fly)">
+            <label for="name">Name:</label>
+            <input type="text" name="name" ng-model="fly.name" id="name"/><br>
+            <label for="season">Season:</label>
+            <input type="text" name="season" ng-model="fly.season" id="season" placeholder="Spring, Summer, Fall, or Winter"/><br>
+            <label for="flyType">Fly Type:</label>
+            <input type="text" name="flyType" id="flyType" ng-model="fly.flyType" placeholder="Nymph, Dry, or Streamer"/><br>
+            <label for="use">Use:</label>
+            <input type="text" name="use" id="use" ng-model="fly.use" placeholder="Bass, Muskie, Panfish, Trout, or Salmon"/><br>
+            <label for="flyImage">Fly Image Url:</label>
+            <input type="text" name="flyImage" id="flyImage" ng-model="fly.flyImage" placeholder="Image Url"><br>
+            <button class="btn btn-primary" type="submit">Save</button>
+        </form>
+    </div>
+</section>

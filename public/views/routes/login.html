@@ -1,0 +1,17 @@
+<div class="col-md-offset-2">
+    <ul class="nav nav-pills">
+        <li><a href="#login"> Admin Log In</a></li>
+        <li><a href="#register">Register</a></li>
+    </ul>
+</div>
+<div class="container">
+    <form class="text-center" novalidate ng-submit="logIn(user)">
+        <h1>Log In</h1>
+        <p>Please enter your username and password to log in</p>
+        <label for="username">Username:</label>
+        <input id="username"autofocus ng-required="true" type="text" ng-model="user.username"/><br>
+        <label for="password">Password:</label>
+        <input id="password" ng-required="true" type="password" ng-model="user.password"><br>
+        <button type="submit" class="btn btn-primary">Log In</button>
+    </form>
+</div>
