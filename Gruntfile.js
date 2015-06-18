@@ -25,6 +25,14 @@ module.exports = function(grunt){
             build5: {
                 src: 'client/scripts/controllers/displayflies.js',
                 dest: 'public/javascripts/controllers/displayflies.min.js'
+            },
+            build6: {
+                src: 'client/scripts/controllers/poststreamreport.js',
+                dest: 'public/javascripts/controllers/poststreamreport.min.js'
+            },
+            build7: {
+                src: 'client/scripts/controllers/streamreport.js',
+                dest: 'public/javascripts/controllers/streamreport.min.js'
             }
         },
         copy: {
@@ -49,7 +57,7 @@ module.exports = function(grunt){
             css: {
                 expand: true,
                 cwd: "client/",
-                src: "stylesheet.css",
+                src: "stylesheets/stylesheet.css",
                 dest: "public/stylesheets/"
             }
         }

@@ -1,10 +1,10 @@
 
 
-<section>
-    <div class="well col-md-6 col-md-offset-3">
+
+    <div class="well col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
         <p>Enter your new fly design here!</p>
 
-        <form novalidate ng-submit="add(fly)">
+        <form novalidate class="text-center" ng-submit="add(fly)">
             <label for="name">Name:</label>
             <input type="text" name="name" ng-model="fly.name" id="name"/><br>
             <label for="season">Season:</label>
@@ -18,4 +18,4 @@
             <button class="btn btn-primary" type="submit">Save</button>
         </form>
     </div>
-</section>
+

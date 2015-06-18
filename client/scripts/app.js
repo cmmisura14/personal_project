@@ -24,7 +24,12 @@ myApp.config(['$routeProvider', '$httpProvider', function($routeProvider, $httpP
             controller: "FlyController"
         }).
         when('/streamreport', {
-            templateUrl: "/views/routes/streamreport.html"
+            templateUrl: "/views/routes/streamreport.html",
+            controller: "DisplayStreamReportController"
+        }).
+        when('/poststreamreport', {
+            templateUrl: "/views/routes/poststreamreport.html",
+            controller: "PostStreamReportController"
         }).
         otherwise({
             redirectTo: '/home'

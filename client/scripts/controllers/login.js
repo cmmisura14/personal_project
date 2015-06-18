@@ -13,7 +13,6 @@ myApp.controller('LogInController', ['$scope', '$http', '$location', function($s
         $http.post('/', user).then(function(response){
             if(response.status === 200){
                 console.log('login works!');
-                $scope.go('/home')
             }
         });
         $scope.user = {};

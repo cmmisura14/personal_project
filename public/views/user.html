@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/stylesheets/stylesheet.css">
+</head>
+
+<body>
+<div class="container-fluid heading">
+    <h1>Middle Coast Flies</h1>
+</div>
+<div class="col-md-offset-2">
+    <ul class="nav nav-pills">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#poststreamreport">Post to the Stream Report Blog</a></li>
+        <li><a href="#displayflies">Flies</a></li>
+        <li><a href="#streamreport">Stream Report</a></li>
+        <li><a href="#login">Log In</a></li>
+        <li><a href="#register">Register</a></li>
+    </ul>
+</div>
+
+<main ng-view></main>
+
+<script type="text/javascript" src="/vendors/angular/angular.min.js"></script>
+<script type="text/javascript" src="/vendors/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="/javascripts/app.min.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/flies.min.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/registration.min.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/login.min.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/displayflies.min.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/poststreamreport.min.js"></script>
+<script type="text/javascript" src="/javascripts/controllers/streamreport.min.js"></script>
+</body>
+</html>

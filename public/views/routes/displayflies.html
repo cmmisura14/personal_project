@@ -1,11 +1,56 @@
 <!--Display flies to the DOM-->
 
-
-<form class="search" novalidate>
-    <label for="season">Search by season: </label>
-    <input id="season" type="text" ng-model="search.color">
-</form>
-<div class="container">
-    <div class="well col-md-3" ng-repeat="fly in flies | filter: search"><img width="200" height="150" ng-src="{{fly.flyImage}}"/><br>
-        {{fly.name}}<br>Use in the {{fly.season}}<br>{{fly.flyType}}<br>Use to catch {{fly.use}}<br></div>
+<div class="sidebar well text-center">
+    <form class="text-center" novalidate>
+        <ul style="list-style-type: none;">
+            <li>
+                <label for="searchByName">Search by Fly Name: </label>
+                <input id="searchByName" type="text" ng-model="search.name">
+            </li>
+        </ul>
+        <ul style="list-style-type: none;">
+            <li><label>Search by Season: </label></li>
+            <li>
+                <label><input type="radio" ng-model="search.season" value="Spring"> Spring</label>
+                <label><input type="radio" ng-model="search.season" value="Summer"> Summer</label>
+            </li>
+            <li>
+                <label><input type="radio" ng-model="search.season" value="Fall"> Fall</label>
+                <label><input type="radio" ng-model="search.season" value="Winter"> Winter</label>
+                <label><input type="radio" ng-model="search.season" value=""> All</label>
+            </li>
+        </ul>
+        <ul style="list-style-type: none;">
+            <li>
+                <label for="searchByFlyType">Search by Fly Type: </label>
+                <input id="searchByFlyType" type="text" ng-model="search.flyType">
+            </li>
+        </ul>
+        <ul style="list-style-type: none;">
+            <li><label>Search by Fish Species: </label></li>
+            <li>
+                <label><input type="radio" ng-model="search.use" value="Trout"> Trout</label>
+                <label><input type="radio" ng-model="search.use" value="Salmon"> Salmon</label>
+            </li>
+            <li>
+                <label><input type="radio" ng-model="search.use" value="Panfish"> Panfish</label>
+                <label><input type="radio" ng-model="search.use" value="Bass"> Bass</label>
+            </li>
+            <li>
+                <label><input type="radio" ng-model="search.use" value="Muskie"> Muskie</label>
+                <label><input type="radio" ng-model="search.use" value=""> All</label>
+            </li>
+        </ul>
+    </form>
+</div>
+<div class="flies">
+    <div class="well fly col-md-3 col-sm-5" ng-repeat="fly in flies | filter: search">
+        <ul style="list-style-type: none;">
+            <li><img width="150" height="100" ng-src="{{fly.flyImage}}"/></li>
+            <li>{{fly.name}}</li>
+            <li>Use in the {{fly.season}}</li>
+            <li>{{fly.flyType}}</li>
+            <li>Use to catch {{fly.use}}</li>
+        </ul>
+    </div>
 </div>

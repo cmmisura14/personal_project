@@ -1,0 +1,29 @@
+
+
+<div class="well col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+    <p>Share your day on the water</p>
+
+    <form novalidate class="text-center" ng-submit="add(report)">
+        <ul style="list-style-type: none;">
+            <li>
+                <label for="date">Date: </label>
+                <input type="date" name="date" id="date" ng-model="report.date"/>
+            </li>
+            <li>
+                <label for="waterName">River/Lake: </label>
+                <input type="text" name="waterName" id="waterName" ng-model="report.waterName"/>
+            </li>
+            <li>
+                <label for="waterTemp">Water Temp: </label>
+                <input type="number" name="waterTemp" id="waterTemp" ng-model="report.waterTemp"/>
+            </li>
+            <li>
+                <label for="description">Description: </label><br>
+                <textarea ROWS=10 COLS=100 class="description" name="description" id="description" ng-model="report.description"></textarea>
+            </li>
+            <li>
+                <button class="btn btn-primary" type="submit">Save</button>
+            </li>
+        </ul>
+    </form>
+</div>

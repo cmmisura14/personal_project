@@ -12,6 +12,8 @@ var Flies = require('./models/flies');
 var register = require('./routes/register');
 var submitFlies = require('./routes/submitflies');
 var displayFlies = require('./routes/displayflies');
+var postStreamReport = require('./routes/poststreamreport');
+var streamReport = require('./routes/streamreport');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -43,19 +45,19 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(function(req, res, next){
-  if(!req.isAuthenticated())
-    return next();
-  else
-    express.static(path.join(__dirname, 'private'));
-});
+//app.use(function(req, res, next){
+//  if(!req.isAuthenticated())
+//    return next();
+//  else
+//    express.static(path.join(__dirname, 'private'));
+//});
 
 app.use(session({
   secret: 'secret',
   key: 'user',
   resave: true,
   saveUninitialized: false,
-  cookie: {maxAge: 60000, secure: false}
+  cookie: {maxAge: 600000, secure: false}
 }));
 
 app.use(passport.initialize());
@@ -66,7 +68,7 @@ passport.serializeUser(function(user, done){
 });
 
 passport.deserializeUser(function(id, done){
-  User.findById(id, function(err, user){
+  Users.findById(id, function(err, user){
     if(err) done(err);
     done(null, user);
   });
@@ -98,6 +100,8 @@ app.use('/users', users);
 app.use('/register', register);
 app.use('/submitflies', submitFlies);
 app.use('/displayflies', displayFlies);
+app.use('/poststreamreport', postStreamReport);
+app.use('/streamreport', streamReport);
 
 
 // catch 404 and forward to error handler

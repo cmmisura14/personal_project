@@ -1,12 +1,24 @@
 
 <div class="container">
-    <form class="text-center" novalidate ng-submit="logIn(user)">
+    <form class="text-center" novalidate action="/" method="post">
         <h1>Log In</h1>
         <p>Please enter your username and password to log in</p>
         <label for="username">Username:</label>
-        <input id="username"autofocus ng-required="true" type="text" ng-model="user.username"/><br>
+        <input id="username"autofocus type="text" name="username"/><br>
         <label for="password">Password:</label>
-        <input id="password" ng-required="true" type="password" ng-model="user.password"><br>
-        <button type="submit" class="btn btn-primary">Log In</button>
+        <input id="password" type="password" name="password"><br>
+        <button type="submit" class="btn">Log In</button>
     </form>
 </div>
+
+<!--<div class="container">-->
+    <!--<form class="text-center" novalidate ng-submit="logIn(user)">-->
+        <!--<h1>Log In</h1>-->
+        <!--<p>Please enter your username and password to log in</p>-->
+        <!--<label for="username">Username:</label>-->
+        <!--<input id="username"autofocus ng-required="true" type="text" ng-model="user.username"/><br>-->
+        <!--<label for="password">Password:</label>-->
+        <!--<input id="password" ng-required="true" type="password" ng-model="user.password"><br>-->
+        <!--<button type="submit" class="btn btn-primary">Log In</button>-->
+    <!--</form>-->
+<!--</div>-->
